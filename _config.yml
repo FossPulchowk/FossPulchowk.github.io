@@ -11,5 +11,5 @@ linkedin_username: Sujit
 
 # Build settings
 markdown: kramdown
-
+paginatae: 5
 
