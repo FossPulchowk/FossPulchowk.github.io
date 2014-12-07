@@ -1,0 +1,13 @@
+# Site settings
+title: Sujit Maharjan
+email: mail@maharjansujit.com.np
+description: > # this means to ignore newlines until baserurl:
+  A site for my projects and my views. Hope you find it useful.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://maharjansujit.com.np" # the base hostname & protocol for your site
+twitter_username: FrenzsOfALL
+github_username:  shubhajeet
+linkedin_username: Sujit 
+
+# Build settings
+markdown: kramdown
