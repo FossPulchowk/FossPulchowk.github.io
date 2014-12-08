@@ -4,10 +4,10 @@
     <title>Sujit Maharjan</title>
     <description>A site for my projects and my views. Hope you find it useful.
 </description>
-    <link>personal/</link>
-    <atom:link href="personal/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 08 Dec 2014 19:11:51 +0545</pubDate>
-    <lastBuildDate>Mon, 08 Dec 2014 19:11:51 +0545</lastBuildDate>
+    <link>maharjansujit.com.np/</link>
+    <atom:link href="maharjansujit.com.np/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 09 Dec 2014 03:13:57 +0545</pubDate>
+    <lastBuildDate>Tue, 09 Dec 2014 03:13:57 +0545</lastBuildDate>
     <generator>Jekyll v2.5.2</generator>
     
       <item>
@@ -17,8 +17,8 @@
 &lt;p&gt;If you want to follow me please do click on the twitter button on the sidebar. Please will free to look at my github account to see things I have created and even fork it.&lt;/p&gt;
 </description>
         <pubDate>Sun, 07 Dec 2014 23:17:27 +0545</pubDate>
-        <link>personal/about</link>
-        <guid isPermaLink="true">personal/about</guid>
+        <link>maharjansujit.com.np/about</link>
+        <guid isPermaLink="true">maharjansujit.com.np/about</guid>
         
         
         <category>site</category>

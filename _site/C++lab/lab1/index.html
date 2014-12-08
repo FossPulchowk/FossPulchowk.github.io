@@ -16,8 +16,8 @@
   <link rel="stylesheet" href="/css/pygment_trac.css">
 
 
-  <link rel="canonical" href="personal/C++lab/lab1/">
-  <link rel="alternate" type="application/atom+xml" title="Sujit Maharjan" href="personal/feed.xml" />
+  <link rel="canonical" href="maharjansujit.com.np/C++lab/lab1/">
+  <link rel="alternate" type="application/atom+xml" title="Sujit Maharjan" href="maharjansujit.com.np/feed.xml" />
   <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
       <![endif]-->
@@ -139,10 +139,7 @@
   
     <h1 >lab1</h1>
       <article class="post-content">
-    <script type="text/javascript">
-</script>
-
-<table>
+    <table>
 
 <tr>
 	<th>
@@ -155,7 +152,7 @@
 	<th>
 
 <div class="highlight">
-<pre id="inf.c"></pre>
+<pre id="inf.c" ></pre>
 </div>
 	</th>
 	</tr>
@@ -172,7 +169,7 @@
 	<th>
 
 <div class="highlight">
-<pre id="find.c"></pre>
+<pre id="find.c" ></pre>
 </div>
 	</th>
 	</tr>
@@ -189,7 +186,7 @@
 	<th>
 
 <div class="highlight">
-<pre id="error.c"></pre>
+<pre id="error.c" ></pre>
 </div>
 	</th>
 	</tr>
@@ -206,7 +203,7 @@
 	<th>
 
 <div class="highlight">
-<pre id="stu.c"></pre>
+<pre id="stu.c" ></pre>
 </div>
 	</th>
 	</tr>
@@ -223,7 +220,7 @@
 	<th>
 
 <div class="highlight">
-<pre id="info.c"></pre>
+<pre id="info.c" ></pre>
 </div>
 	</th>
 	</tr>
@@ -241,7 +238,7 @@ request.onreadystatechange = function() {
 var done = 4, ok = 200;
 if (request.readyState == done && request.status == ok) {
   if (request.responseText) {
-	box.innerHTML = request.responseText.replace(/(?:\r\n|\r|\n)/g, '<br />').replace(/(?:\r\t|\r|\t)/g, '&nbsp;');
+	box.innerHTML = request.responseText;
         }
       }
     };
@@ -281,11 +278,22 @@ function getfiles()
 	else
 	alert("box found empty");
 	
+(function() {
+    var pre = document.getElementsByTagName('pre'),
+        pl = pre.length;
+    for (var i = 0; i < pl; i++) {
+        pre[i].innerHTML = '<span class="line-number"></span>' + pre[i].innerHTML + '<span class="cl"></span>';
+        var num = pre[i].innerHTML.split(/\n/).length;
+        for (var j = 0; j < num; j++) {
+            var line_num = pre[i].getElementsByTagName('span')[0];
+            line_num.innerHTML += '<span>' + (j + 1) + '</span>';
+        }
+    }
+})();
 }
 
 document.addEventListener('DOMContentLoaded', getfiles, false);
 </script>
-
 
   </article>
   
