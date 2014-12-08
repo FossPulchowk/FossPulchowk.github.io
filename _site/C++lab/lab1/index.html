@@ -16,8 +16,8 @@
   <link rel="stylesheet" href="/css/pygment_trac.css">
 
 
-  <link rel="canonical" href="http://maharjansujit.com.np/C++lab/lab1/">
-  <link rel="alternate" type="application/atom+xml" title="Sujit Maharjan" href="http://maharjansujit.com.np/feed.xml" />
+  <link rel="canonical" href="personal/C++lab/lab1/">
+  <link rel="alternate" type="application/atom+xml" title="Sujit Maharjan" href="personal/feed.xml" />
   <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
       <![endif]-->
@@ -96,7 +96,7 @@
     
     
     <li>
-      <a href="https://twitter.com/FrenzsOfALL">
+      <a href="https://twitter.com/FrensOfAll">
         <span class="icon  icon--twitter">
 <svg viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
 <path d="M0,30 C0,13.4314567 13.4508663,0 30.0433526,0 C46.6358389,0 60.0867052,13.4314567 60.0867052,30 C60.0867052,46.5685433 46.6358389,60 30.0433526,60 C13.4508663,60 0,46.5685433 0,30 Z M0,30" fill="#333333" sketch:type="MSShapeGroup"></path>
@@ -104,7 +104,7 @@
 <path d="M60.0867052,30 C60.0867052,46.5685433 46.6358389,60 30.0433526,60 C23.8895925,60 18.1679598,58.1525134 13.4044895,54.9827754 L47.8290478,5.81941103 C55.2628108,11.2806503 60.0867052,20.0777973 60.0867052,30 Z M60.0867052,30" id="reflec" fill-opacity="0.08" fill="#000000" sketch:type="MSShapeGroup"></path>
 </svg>
 	</span>
-	<span class="username"><strong>FrenzsOfALL</strong></span>
+	<span class="username"><strong>FrensOfAll</strong></span>
       </a>
     </li>
     
@@ -139,94 +139,152 @@
   
     <h1 >lab1</h1>
       <article class="post-content">
-    <table>
+    <script type="text/javascript">
+</script>
 
+<table>
 
 <tr>
 	<th>
-	<a href="inf.c">
-	inf.c
-	</a>
+		<a href="inf.c">
+		inf.c
+		</a>	
 	</th>
 </tr>
 <tr>
 	<th>
-	
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">inf</span><span class="o">.</span><span class="n">c</span></code></pre></div>
 
+<div class="highlight">
+<pre id="inf.c"></pre>
+</div>
 	</th>
-</tr>
-
+	</tr>
 
 
 <tr>
 	<th>
-	<a href="find.c">
-	find.c
-	</a>
+		<a href="find.c">
+		find.c
+		</a>	
 	</th>
 </tr>
 <tr>
 	<th>
-	
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">find</span><span class="o">.</span><span class="n">c</span></code></pre></div>
 
+<div class="highlight">
+<pre id="find.c"></pre>
+</div>
 	</th>
-</tr>
-
+	</tr>
 
 
 <tr>
 	<th>
-	<a href="error.c">
-	error.c
-	</a>
+		<a href="error.c">
+		error.c
+		</a>	
 	</th>
 </tr>
 <tr>
 	<th>
-	
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">error</span><span class="o">.</span><span class="n">c</span></code></pre></div>
 
+<div class="highlight">
+<pre id="error.c"></pre>
+</div>
 	</th>
-</tr>
-
+	</tr>
 
 
 <tr>
 	<th>
-	<a href="stu.c">
-	stu.c
-	</a>
+		<a href="stu.c">
+		stu.c
+		</a>	
 	</th>
 </tr>
 <tr>
 	<th>
-	
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">stu</span><span class="o">.</span><span class="n">c</span></code></pre></div>
 
+<div class="highlight">
+<pre id="stu.c"></pre>
+</div>
 	</th>
-</tr>
-
+	</tr>
 
 
 <tr>
 	<th>
-	<a href="info.c">
-	info.c
-	</a>
+		<a href="info.c">
+		info.c
+		</a>	
 	</th>
 </tr>
 <tr>
 	<th>
-	
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">info</span><span class="o">.</span><span class="n">c</span></code></pre></div>
 
+<div class="highlight">
+<pre id="info.c"></pre>
+</div>
 	</th>
-</tr>
+	</tr>
 
 
 </table>
+<script type="text/javascript">
+
+function ajax(url, box) {
+var request =  new XMLHttpRequest();
+request.open("GET", url, true);
+request.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+
+request.onreadystatechange = function() {
+var done = 4, ok = 200;
+if (request.readyState == done && request.status == ok) {
+  if (request.responseText) {
+	box.innerHTML = request.responseText.replace(/(?:\r\n|\r|\n)/g, '<br />').replace(/(?:\r\t|\r|\t)/g, '&nbsp;');
+        }
+      }
+    };
+    request.send();
+}
+
+function getfiles() 
+{
+	
+        var box =  document.getElementById("inf.c");	
+	if (box !== null)
+	ajax("inf.c", box);
+	else
+	alert("box found empty");
+	
+        var box =  document.getElementById("find.c");	
+	if (box !== null)
+	ajax("find.c", box);
+	else
+	alert("box found empty");
+	
+        var box =  document.getElementById("error.c");	
+	if (box !== null)
+	ajax("error.c", box);
+	else
+	alert("box found empty");
+	
+        var box =  document.getElementById("stu.c");	
+	if (box !== null)
+	ajax("stu.c", box);
+	else
+	alert("box found empty");
+	
+        var box =  document.getElementById("info.c");	
+	if (box !== null)
+	ajax("info.c", box);
+	else
+	alert("box found empty");
+	
+}
+
+document.addEventListener('DOMContentLoaded', getfiles, false);
+</script>
 
 
   </article>

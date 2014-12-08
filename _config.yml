@@ -5,8 +5,8 @@ email: mail@maharjansujit.com.np
 description: > # this means to ignore newlines until baserurl:
   A site for my projects and my views. Hope you find it useful.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://maharjansujit.com.np" # the base hostname & protocol for your site
-twitter_username: FrenzsOfALL
+url: "personal" # the base hostname & protocol for your site
+twitter_username: FrensOfAll
 github_username:  shubhajeet
 linkedin_username: Sujit 
 
