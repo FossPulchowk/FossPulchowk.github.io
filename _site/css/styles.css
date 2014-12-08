@@ -109,7 +109,7 @@ header {
   position:fixed;
 }
 
-.box ul {
+.box ul{
   list-style:none;
   height:40px;
   
@@ -144,7 +144,8 @@ header {
   border-radius:0 5px 5px 0;
 }
 
-.box ul a {
+.box ul a
+{
   line-height:1;
   font-size:11px;
   color:#999;
@@ -154,7 +155,7 @@ header {
   height:34px;
 }
 
-header ul a:hover {
+ul a:hover{
   color:#999;
   background: -moz-linear-gradient(top, #fff 0%, #ddd 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#ddd));
@@ -164,7 +165,7 @@ header ul a:hover {
   background: linear-gradient(top, #fff 0%,#ddd 100%);
 }
 
-header ul a:active {
+.box ul a:active, nav a:active {
   -webkit-box-shadow: inset 0px 2px 2px 0px #ddd;
   -moz-box-shadow: inset 0px 2px 2px 0px #ddd;
   box-shadow: inset 0px 2px 2px 0px #ddd;
@@ -185,7 +186,7 @@ strong {
   width:89px;
 }
 
-header ul a strong {
+.box ul a strong {
   font-size:14px;
   display:block;
   color:#222;
@@ -209,7 +210,8 @@ hr {
 }
 
 .info {
- margin-top: 50px;
+ margin-top: 100px;
+ position: fixed;
 }
 @media print, screen and (max-width: 960px) {
   
@@ -302,11 +304,13 @@ hr {
         line-height: 0;
         padding-top: 10px;
         text-align: center; }
-.name:before{
-content:"Name";
+.Name:before 
+{
+  content:"Name ";
 }
-.email:before{
-content:"Email";
+.Email:before 
+{
+  content:"Email ";
 }
 
 
