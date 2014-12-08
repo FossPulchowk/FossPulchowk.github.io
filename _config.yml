@@ -12,4 +12,4 @@ linkedin_username: Sujit
 
 # Build settings
 markdown: kramdown
-
+data: C++lab/data.yml
