@@ -212,8 +212,9 @@ hr {
 }
 
 .info {
- margin-top: 100px;
- position: fixed;
+ margin-top: 50px;
+ margin-botton:10px;
+
 }
 @media print, screen and (max-width: 960px) {
   
