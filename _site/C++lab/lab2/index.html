@@ -143,183 +143,393 @@
     <h1 >lab2</h1>
       <article class="post-content">
     <table>
+  
+  <tr>
+    <th>
+      <a href="date.cpp">
+	date.cpp
+      </a>	
+    </th>
+  </tr>
+  <tr>
+    <th>
+      
+      
+<div class="highlight"><pre><code class="language-c" data-lang="c"><span class="lineno"> 1</span> <span class="cm">/********</span>
+<span class="lineno"> 2</span> <span class="cm"> *</span>
+<span class="lineno"> 3</span> <span class="cm"> * Sujit Maharjan</span>
+<span class="lineno"> 4</span> <span class="cm"> *</span>
+<span class="lineno"> 5</span> <span class="cm"> * lab2</span>
+<span class="lineno"> 6</span> <span class="cm"> * problem 1</span>
+<span class="lineno"> 7</span> <span class="cm"> * Write a program to set a structure to hold a date (mm,dd and yy), assign values to the members of the structure and print out the values in the format 11/28/2004 by function. Pass the structure to the function</span>
+<span class="lineno"> 8</span> <span class="cm"> ********/</span>
+<span class="lineno"> 9</span> <span class="c1">// header file for input output in c++</span>
+<span class="lineno">10</span> <span class="cp">#include &lt;iostream&gt;</span>
+<span class="lineno">11</span> <span class="c1">// header file for input output manipulation</span>
+<span class="lineno">12</span> <span class="cp">#include &lt;iomanip&gt;</span>
+<span class="lineno">13</span> <span class="cp">#define SUCESS 0</span>
+<span class="lineno">14</span> <span class="cp">#define true 0</span>
+<span class="lineno">15</span> <span class="cp">#define false 1</span>
+<span class="lineno">16</span> <span class="c1">// adding std namspace</span>
+<span class="lineno">17</span> <span class="n">using</span> <span class="n">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="lineno">18</span> 
+<span class="lineno">19</span> <span class="c1">// date data structre</span>
+<span class="lineno">20</span> <span class="k">struct</span> <span class="n">date</span> <span class="p">{</span>
+<span class="lineno">21</span>   <span class="kt">int</span> <span class="n">year</span><span class="p">;</span>
+<span class="lineno">22</span>   <span class="kt">int</span> <span class="n">month</span><span class="p">;</span>
+<span class="lineno">23</span>   <span class="kt">int</span> <span class="n">day</span><span class="p">;</span>
+<span class="lineno">24</span> <span class="p">};</span>
+<span class="lineno">25</span> 
+<span class="lineno">26</span> <span class="c1">// function that displays date</span>
+<span class="lineno">27</span> <span class="kt">void</span> <span class="nf">display</span><span class="p">(</span><span class="k">struct</span> <span class="n">date</span> <span class="n">d</span><span class="p">)</span>
+<span class="lineno">28</span> <span class="p">{</span>
+<span class="lineno">29</span>   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">setw</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">d</span><span class="p">.</span><span class="n">day</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;/&#39;</span><span class="o">&lt;&lt;</span> <span class="n">setw</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">d</span><span class="p">.</span><span class="n">month</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;/&#39;</span> <span class="o">&lt;&lt;</span> <span class="n">setw</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">d</span><span class="p">.</span><span class="n">year</span><span class="p">;</span>
+<span class="lineno">30</span> <span class="p">}</span>
+<span class="lineno">31</span> 
+<span class="lineno">32</span> <span class="c1">// function that gets date</span>
+<span class="lineno">33</span> <span class="kt">void</span> <span class="nf">getdate</span><span class="p">(</span><span class="k">struct</span> <span class="n">date</span> <span class="o">*</span><span class="n">d</span><span class="p">)</span>
+<span class="lineno">34</span> <span class="p">{</span>
+<span class="lineno">35</span>   <span class="kt">int</span> <span class="n">sucess</span><span class="p">;</span>
+<span class="lineno">36</span>   <span class="k">do</span>
+<span class="lineno">37</span>     <span class="p">{</span>
+<span class="lineno">38</span>       <span class="n">sucess</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+<span class="lineno">39</span>       <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;day/month/year:&quot;</span><span class="p">;</span>
+<span class="lineno">40</span>       <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">d</span><span class="o">-&gt;</span><span class="n">day</span> <span class="o">&gt;&gt;</span> <span class="n">d</span><span class="o">-&gt;</span><span class="n">month</span> <span class="o">&gt;&gt;</span> <span class="n">d</span><span class="o">-&gt;</span><span class="n">year</span><span class="p">;</span>
+<span class="lineno">41</span>       <span class="c1">// date input validation</span>
+<span class="lineno">42</span>       <span class="k">if</span> <span class="p">(</span> <span class="n">d</span><span class="o">-&gt;</span><span class="n">month</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="o">||</span> <span class="n">d</span><span class="o">-&gt;</span><span class="n">month</span> <span class="o">&gt;</span> <span class="mi">12</span><span class="p">)</span> <span class="c1">// month should be between 1 to 12 </span>
+<span class="lineno">43</span> 	<span class="p">{</span>
+<span class="lineno">44</span> 	  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;month should be between 1 to 12&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="lineno">45</span> 	  <span class="n">sucess</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+<span class="lineno">46</span> 	<span class="p">}</span>
+<span class="lineno">47</span>       <span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="n">d</span><span class="o">-&gt;</span><span class="n">day</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="o">||</span> <span class="n">d</span><span class="o">-&gt;</span><span class="n">day</span> <span class="o">&gt;</span> <span class="mi">33</span> <span class="p">)</span> <span class="c1">// date of the month should be between 1 to 32</span>
+<span class="lineno">48</span> 	<span class="p">{</span>
+<span class="lineno">49</span> 	  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;date must be between 1 to 32&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="lineno">50</span> 	  <span class="n">sucess</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+<span class="lineno">51</span> 	<span class="p">}</span> 
+<span class="lineno">52</span>     <span class="p">}</span>
+<span class="lineno">53</span>   <span class="k">while</span><span class="p">(</span><span class="n">sucess</span> <span class="o">!=</span> <span class="nb">true</span><span class="p">);</span> 
+<span class="lineno">54</span> <span class="p">}</span>
+<span class="lineno">55</span> 
+<span class="lineno">56</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="lineno">57</span> <span class="p">{</span>
+<span class="lineno">58</span>   <span class="c1">// declaring an instance of struct date</span>
+<span class="lineno">59</span>   <span class="k">struct</span> <span class="n">date</span> <span class="n">d</span><span class="p">;</span>
+<span class="lineno">60</span>   
+<span class="lineno">61</span>   <span class="c1">// getting input from the user</span>
+<span class="lineno">62</span>   <span class="n">getdate</span><span class="p">(</span><span class="o">&amp;</span><span class="n">d</span><span class="p">);</span>
+<span class="lineno">63</span> 
+<span class="lineno">64</span>   <span class="c1">// displaying input from the user</span>
+<span class="lineno">65</span>   <span class="n">display</span><span class="p">(</span><span class="n">d</span><span class="p">);</span>
+<span class="lineno">66</span> 
+<span class="lineno">67</span>   <span class="c1">// returning SUCESS</span>
+<span class="lineno">68</span>   <span class="k">return</span> <span class="n">SUCESS</span><span class="p">;</span>
+<span class="lineno">69</span> <span class="p">}</span></code></pre></div>
 
-<tr>
-	<th>
-		<a href="date.cpp">
-		date.cpp
-		</a>	
-	</th>
-</tr>
-<tr>
-	<th>
+      
+  <tr>
+    <th>
+      <a href="convert.cpp">
+	convert.cpp
+      </a>	
+    </th>
+  </tr>
+  <tr>
+    <th>
+      
+      
+<div class="highlight"><pre><code class="language-c" data-lang="c"><span class="lineno"> 1</span> <span class="cm">/********</span>
+<span class="lineno"> 2</span> <span class="cm"> *</span>
+<span class="lineno"> 3</span> <span class="cm"> * Sujit Maharjan</span>
+<span class="lineno"> 4</span> <span class="cm"> *</span>
+<span class="lineno"> 5</span> <span class="cm"> * lab2</span>
+<span class="lineno"> 6</span> <span class="cm"> * Write a program using the function overloading that converts feet to inches. Use function with no argument, one argument and two arguments. Decide yourself the types of arguments. Use pass by reference in any one of the function above.*</span>
+<span class="lineno"> 7</span> <span class="cm"> ********/</span>
+<span class="lineno"> 8</span> <span class="c1">// header file for input and output</span>
+<span class="lineno"> 9</span> <span class="cp">#include &lt;iostream&gt;</span>
+<span class="lineno">10</span> <span class="c1">// header file for input output manipulation</span>
+<span class="lineno">11</span> <span class="cp">#include &lt;iomanip&gt;</span>
+<span class="lineno">12</span> <span class="c1">// adding std namespace</span>
+<span class="lineno">13</span> <span class="n">using</span> <span class="n">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="lineno">14</span> <span class="cp">#define SUCESS 0</span>
+<span class="lineno">15</span> <span class="cp">#define CONVERSION_FACTOR 12</span>
+<span class="lineno">16</span> 
+<span class="lineno">17</span> <span class="cm">/**</span>
+<span class="lineno">18</span> <span class="cm"> *</span>
+<span class="lineno">19</span> <span class="cm"> * \brief coverts feet to inches</span>
+<span class="lineno">20</span> <span class="cm"> *</span>
+<span class="lineno">21</span> <span class="cm"> * \params feet</span>
+<span class="lineno">22</span> <span class="cm"> * \params inches</span>
+<span class="lineno">23</span> <span class="cm"> */</span>
+<span class="lineno">24</span> <span class="kt">void</span> <span class="nf">convert</span><span class="p">()</span> <span class="c1">// when no argument is supplied</span>
+<span class="lineno">25</span> <span class="p">{</span>
+<span class="lineno">26</span>   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Feet?&quot;</span><span class="p">;</span>
+<span class="lineno">27</span>   <span class="kt">int</span> <span class="n">feet</span><span class="p">;</span>
+<span class="lineno">28</span>   <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">feet</span><span class="p">;</span>
+<span class="lineno">29</span>   <span class="kt">float</span> <span class="n">inch</span><span class="p">;</span>
+<span class="lineno">30</span>   <span class="n">inch</span> <span class="o">=</span> <span class="n">feet</span> <span class="o">*</span> <span class="n">CONVERSION_FACTOR</span><span class="p">;</span>
+<span class="lineno">31</span>   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;In inch&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">inch</span><span class="p">;</span>
+<span class="lineno">32</span> <span class="p">}</span>
+<span class="lineno">33</span> <span class="kt">float</span> <span class="nf">convert</span><span class="p">(</span><span class="kt">int</span> <span class="n">feet</span><span class="p">)</span> <span class="c1">// one arugument</span>
+<span class="lineno">34</span> <span class="p">{</span>
+<span class="lineno">35</span>   <span class="k">return</span> <span class="n">feet</span> <span class="o">*</span> <span class="n">CONVERSION_FACTOR</span><span class="p">;</span>
+<span class="lineno">36</span> <span class="p">}</span>
+<span class="lineno">37</span> <span class="kt">void</span> <span class="nf">convert</span><span class="p">(</span><span class="kt">int</span> <span class="n">feet</span><span class="p">,</span> <span class="kt">float</span> <span class="o">&amp;</span><span class="n">inch</span><span class="p">)</span> <span class="c1">// two argument</span>
+<span class="lineno">38</span> <span class="p">{</span>
+<span class="lineno">39</span>   <span class="n">inch</span> <span class="o">=</span> <span class="n">feet</span> <span class="o">*</span> <span class="n">CONVERSION_FACTOR</span><span class="p">;</span>
+<span class="lineno">40</span> <span class="p">}</span>
+<span class="lineno">41</span> 
+<span class="lineno">42</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="lineno">43</span> <span class="p">{</span>
+<span class="lineno">44</span>   
+<span class="lineno">45</span>   <span class="n">convert</span><span class="p">();</span>
+<span class="lineno">46</span>   <span class="kt">int</span> <span class="n">feet</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
+<span class="lineno">47</span>   <span class="kt">float</span> <span class="n">inch</span><span class="p">;</span>
+<span class="lineno">48</span>   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Converting 12 feet to inch&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="lineno">49</span>   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;12 feet in inch :&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">convert</span><span class="p">(</span><span class="n">feet</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="lineno">50</span>   <span class="n">feet</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="lineno">51</span>   <span class="n">convert</span><span class="p">(</span><span class="n">feet</span><span class="p">,</span><span class="n">inch</span><span class="p">);</span>
+<span class="lineno">52</span>   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Converting &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">feet</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;to inch&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="lineno">53</span>   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">feet</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; in inch:&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">inch</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="lineno">54</span>   <span class="k">return</span> <span class="n">SUCESS</span><span class="p">;</span>
+<span class="lineno">55</span> <span class="p">}</span></code></pre></div>
 
-<div class="highlight">
-<pre id="date.cpp" ></pre>
-</div>
-	</th>
-	</tr>
+      
+  <tr>
+    <th>
+      <a href="temp.cpp">
+	temp.cpp
+      </a>	
+    </th>
+  </tr>
+  <tr>
+    <th>
+      
+      
+<div class="highlight"><pre><code class="language-c" data-lang="c"><span class="lineno"> 1</span> <span class="cm">/********</span>
+<span class="lineno"> 2</span> <span class="cm"> *</span>
+<span class="lineno"> 3</span> <span class="cm"> * Sujit Maharjan</span>
+<span class="lineno"> 4</span> <span class="cm"> *</span>
+<span class="lineno"> 5</span> <span class="cm"> * lab2</span>
+<span class="lineno"> 6</span> <span class="cm"> * Write a function that passes two temperatures by reference and sets the larger of the two numbers to 100 by using return by reference.</span>
+<span class="lineno"> 7</span> <span class="cm"> ********/</span>
+<span class="lineno"> 8</span> <span class="c1">// header file for input and output</span>
+<span class="lineno"> 9</span> <span class="cp">#include &lt;iostream&gt;</span>
+<span class="lineno">10</span> <span class="c1">// header file for input output manipulation</span>
+<span class="lineno">11</span> <span class="cp">#include &lt;iomanip&gt;</span>
+<span class="lineno">12</span> <span class="c1">// adding std namespace</span>
+<span class="lineno">13</span> <span class="n">using</span> <span class="n">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="lineno">14</span> <span class="cp">#define SUCESS 0</span>
+<span class="lineno">15</span> 
+<span class="lineno">16</span> <span class="cm">/********</span>
+<span class="lineno">17</span> <span class="cm"> * \brief weird function that set higher argument to 100</span>
+<span class="lineno">18</span> <span class="cm"> *</span>
+<span class="lineno">19</span> <span class="cm"> * \parmas temp1: temperature by reference</span>
+<span class="lineno">20</span> <span class="cm"> * \parmas temp2: temperature by reference</span>
+<span class="lineno">21</span> <span class="cm"> ********/</span>
+<span class="lineno">22</span> <span class="kt">int</span> <span class="nf">func</span> <span class="p">(</span><span class="kt">int</span> <span class="o">&amp;</span><span class="n">temp1</span><span class="p">,</span><span class="kt">int</span> <span class="o">&amp;</span><span class="n">temp2</span><span class="p">)</span>
+<span class="lineno">23</span>   <span class="p">{</span>
+<span class="lineno">24</span>     <span class="k">if</span> <span class="p">(</span><span class="n">temp1</span> <span class="o">&gt;</span> <span class="n">temp2</span><span class="p">)</span>
+<span class="lineno">25</span>       <span class="p">{</span>
+<span class="lineno">26</span> 	<span class="n">temp1</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+<span class="lineno">27</span>       <span class="p">}</span>
+<span class="lineno">28</span>     <span class="k">else</span>
+<span class="lineno">29</span>       <span class="p">{</span>
+<span class="lineno">30</span> 	<span class="n">temp2</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+<span class="lineno">31</span>       <span class="p">}</span>
+<span class="lineno">32</span>   <span class="p">}</span>
+<span class="lineno">33</span> 
+<span class="lineno">34</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="lineno">35</span> <span class="p">{</span>
+<span class="lineno">36</span>   <span class="kt">int</span> <span class="n">temp1</span><span class="p">,</span> <span class="n">temp2</span><span class="p">;</span>
+<span class="lineno">37</span>   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Enter temp1 and temp2?&quot;</span><span class="p">;</span>
+<span class="lineno">38</span>   <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">temp1</span><span class="o">&gt;&gt;</span> <span class="n">temp2</span><span class="p">;</span>
+<span class="lineno">39</span>   <span class="n">func</span><span class="p">(</span><span class="n">temp1</span><span class="p">,</span><span class="n">temp2</span><span class="p">);</span>
+<span class="lineno">40</span>   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Value of temp1 and temp2 after calling the fucntion&quot;</span><span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="lineno">41</span>   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;temp1 &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">temp1</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; temp2 &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">temp2</span><span class="p">;</span> 
+<span class="lineno">42</span>   <span class="k">return</span> <span class="n">SUCESS</span><span class="p">;</span>
+<span class="lineno">43</span> <span class="p">}</span></code></pre></div>
 
+      
+  <tr>
+    <th>
+      <a href="namespace.cpp">
+	namespace.cpp
+      </a>	
+    </th>
+  </tr>
+  <tr>
+    <th>
+      
+      
+<div class="highlight"><pre><code class="language-c" data-lang="c"><span class="lineno"> 1</span> <span class="cm">/********</span>
+<span class="lineno"> 2</span> <span class="cm"> *</span>
+<span class="lineno"> 3</span> <span class="cm"> * Sujit Maharjan</span>
+<span class="lineno"> 4</span> <span class="cm"> *</span>
+<span class="lineno"> 5</span> <span class="cm"> * lab2</span>
+<span class="lineno"> 6</span> <span class="cm"> * Define two namespaces: Square and Cube. In both the namespaces, define an integer variable named &quot;num&quot; and a function named &quot;fun&quot;. The &quot;fun&quot; function in &quot;Square&quot; namespace, should return the square of an integer passed as an argument while the &quot;fun&quot; function in &quot;Cube&quot; namespace, should return the cube of an integer passed as an argument. In the main function, set the integer variables &quot;num&quot; of both the namespaces with different values. Then, compute and print the cube of the integer variable &quot;num&quot; of the &quot;Square&quot; namespace using the &quot;fun&quot; function of the &quot;Cube&quot; namespace and the square of the integer variable &quot;num&quot; of the &quot;Cube&quot; namespace using the &quot;fun&quot; function of the &quot;Square&quot; namespace</span>
+<span class="lineno"> 7</span> <span class="cm"> ********/</span>
+<span class="lineno"> 8</span> <span class="c1">// header file for input and output</span>
+<span class="lineno"> 9</span> <span class="cp">#include &lt;iostream&gt;</span>
+<span class="lineno">10</span> <span class="c1">// header file for input output manipulation</span>
+<span class="lineno">11</span> <span class="cp">#include &lt;iomanip&gt;</span>
+<span class="lineno">12</span> <span class="c1">// adding std namespace</span>
+<span class="lineno">13</span> <span class="n">using</span> <span class="n">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="lineno">14</span> <span class="cp">#define SUCESS 0</span>
+<span class="lineno">15</span> 
+<span class="lineno">16</span> <span class="cm">/********</span>
+<span class="lineno">17</span> <span class="cm"> * namespace square</span>
+<span class="lineno">18</span> <span class="cm"> ********/</span>
+<span class="lineno">19</span> <span class="n">namespace</span> <span class="n">square</span>
+<span class="lineno">20</span> <span class="p">{</span>
+<span class="lineno">21</span>   <span class="kt">int</span> <span class="n">num</span><span class="p">;</span>
+<span class="lineno">22</span>   <span class="cm">/********</span>
+<span class="lineno">23</span> <span class="cm">   * \brief returns square of the no</span>
+<span class="lineno">24</span> <span class="cm">   ********/</span>
+<span class="lineno">25</span>   <span class="kt">int</span> <span class="nf">fun</span> <span class="p">(</span><span class="kt">int</span> <span class="n">no</span><span class="p">)</span>
+<span class="lineno">26</span>   <span class="p">{</span>
+<span class="lineno">27</span>     <span class="k">return</span> <span class="n">no</span> <span class="o">*</span> <span class="n">no</span><span class="p">;</span>
+<span class="lineno">28</span>   <span class="p">}</span>
+<span class="lineno">29</span> <span class="p">};</span>
+<span class="lineno">30</span> 
+<span class="lineno">31</span> <span class="cm">/********</span>
+<span class="lineno">32</span> <span class="cm"> * namespace cube</span>
+<span class="lineno">33</span> <span class="cm"> ********/</span>
+<span class="lineno">34</span> <span class="n">namespace</span> <span class="n">cube</span>
+<span class="lineno">35</span> <span class="p">{</span>
+<span class="lineno">36</span> 
+<span class="lineno">37</span>   <span class="kt">int</span> <span class="n">num</span><span class="p">;</span>
+<span class="lineno">38</span>   <span class="cm">/********</span>
+<span class="lineno">39</span> <span class="cm">   * \brief returns square of the no</span>
+<span class="lineno">40</span> <span class="cm">   ********/</span>
+<span class="lineno">41</span>   <span class="kt">int</span> <span class="nf">fun</span> <span class="p">(</span><span class="kt">int</span> <span class="n">no</span><span class="p">)</span>
+<span class="lineno">42</span>   <span class="p">{</span>
+<span class="lineno">43</span>     <span class="k">return</span> <span class="n">no</span> <span class="o">*</span> <span class="n">no</span> <span class="o">*</span> <span class="n">no</span><span class="p">;</span>
+<span class="lineno">44</span>   <span class="p">}</span>
+<span class="lineno">45</span> <span class="p">};</span>
+<span class="lineno">46</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="lineno">47</span> <span class="p">{</span>
+<span class="lineno">48</span>   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Enter number for squaring?&quot;</span><span class="p">;</span>
+<span class="lineno">49</span>   <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">square</span><span class="o">::</span><span class="n">num</span><span class="p">;</span>
+<span class="lineno">50</span>   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;square of &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">square</span><span class="o">::</span><span class="n">num</span> <span class="o">&lt;&lt;</span><span class="s">&quot; is &quot;</span><span class="o">&lt;&lt;</span> <span class="n">square</span><span class="o">::</span><span class="n">fun</span><span class="p">(</span><span class="n">square</span><span class="o">::</span><span class="n">num</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+<span class="lineno">51</span>   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Enter number for cubing?&quot;</span><span class="p">;</span>
+<span class="lineno">52</span>   <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">cube</span><span class="o">::</span><span class="n">num</span><span class="p">;</span>
+<span class="lineno">53</span>   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;cube of &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">cube</span><span class="o">::</span><span class="n">num</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; is &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">cube</span><span class="o">::</span><span class="n">fun</span><span class="p">(</span><span class="n">cube</span><span class="o">::</span><span class="n">num</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> 
+<span class="lineno">54</span>   <span class="k">return</span> <span class="n">SUCESS</span><span class="p">;</span>
+<span class="lineno">55</span> <span class="p">}</span></code></pre></div>
 
-<tr>
-	<th>
-		<a href="convert.cpp">
-		convert.cpp
-		</a>	
-	</th>
-</tr>
-<tr>
-	<th>
+      
+  <tr>
+    <th>
+      <a href="employee.cpp">
+	employee.cpp
+      </a>	
+    </th>
+  </tr>
+  <tr>
+    <th>
+      
+      
+<div class="highlight"><pre><code class="language-c" data-lang="c"><span class="lineno"> 1</span> <span class="cm">/********</span>
+<span class="lineno"> 2</span> <span class="cm"> *</span>
+<span class="lineno"> 3</span> <span class="cm"> * Sujit Maharjan</span>
+<span class="lineno"> 4</span> <span class="cm"> *</span>
+<span class="lineno"> 5</span> <span class="cm"> * lab2</span>
+<span class="lineno"> 6</span> <span class="cm"> * Assume that employee will have to pay 10 percent income tax to the government. Ask user to enter the employee salary. Use inline function to display the net payment to the employee by the company.</span>
+<span class="lineno"> 7</span> <span class="cm"> ********/</span>
+<span class="lineno"> 8</span> <span class="c1">// header file for input and output</span>
+<span class="lineno"> 9</span> <span class="cp">#include &lt;iostream&gt;</span>
+<span class="lineno">10</span> <span class="c1">// header file for input output manipulation</span>
+<span class="lineno">11</span> <span class="cp">#include &lt;iomanip&gt;</span>
+<span class="lineno">12</span> <span class="c1">// adding std namespace</span>
+<span class="lineno">13</span> <span class="n">using</span> <span class="n">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="lineno">14</span> <span class="cp">#define SUCESS 0</span>
+<span class="lineno">15</span> <span class="cp">#define TAX_RATE (10.0/100.0)</span>
+<span class="lineno">16</span> 
+<span class="lineno">17</span> <span class="cm">/********</span>
+<span class="lineno">18</span> <span class="cm"> * \brief calculates the income tax </span>
+<span class="lineno">19</span> <span class="cm"> *</span>
+<span class="lineno">20</span> <span class="cm"> * \parmas temp1: temperature by reference</span>
+<span class="lineno">21</span> <span class="cm"> * \parmas temp2: temperature by reference</span>
+<span class="lineno">22</span> <span class="cm"> ********/</span>
+<span class="lineno">23</span> <span class="c1">// returns tax on the salary</span>
+<span class="lineno">24</span> <span class="kr">inline</span> <span class="kt">float</span> <span class="nf">tax</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span><span class="k">return</span> <span class="p">(</span><span class="n">i</span> <span class="o">*</span> <span class="n">TAX_RATE</span><span class="p">);}</span> 
+<span class="lineno">25</span> 
+<span class="lineno">26</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="lineno">27</span> <span class="p">{</span>
+<span class="lineno">28</span>   <span class="kt">int</span> <span class="n">income</span><span class="p">;</span>
+<span class="lineno">29</span>   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Enter employee salary?&quot;</span><span class="p">;</span>
+<span class="lineno">30</span>   <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">income</span><span class="p">;</span>
+<span class="lineno">31</span>   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Income tax to be paid by the employee :&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">tax</span><span class="p">(</span><span class="n">income</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> 
+<span class="lineno">32</span>   <span class="k">return</span> <span class="n">SUCESS</span><span class="p">;</span>
+<span class="lineno">33</span> <span class="p">}</span></code></pre></div>
 
-<div class="highlight">
-<pre id="convert.cpp" ></pre>
-</div>
-	</th>
-	</tr>
+      
+  <tr>
+    <th>
+      <a href="staff.cpp">
+	staff.cpp
+      </a>	
+    </th>
+  </tr>
+  <tr>
+    <th>
+      
+      
+<div class="highlight"><pre><code class="language-c" data-lang="c"><span class="lineno"> 1</span> <span class="cm">/********</span>
+<span class="lineno"> 2</span> <span class="cm"> *</span>
+<span class="lineno"> 3</span> <span class="cm"> * Sujit Maharjan</span>
+<span class="lineno"> 4</span> <span class="cm"> *</span>
+<span class="lineno"> 5</span> <span class="cm"> * lab2</span>
+<span class="lineno"> 6</span> <span class="cm"> * Write a program that displays the current monthly salary of chief executive officer, information officer, and system analyst, programmer that has been increased by 9, 10, 12, and 12 percentages respectively in year 2010. Let us assume that the salaries in year 2009 are</span>
+<span class="lineno"> 7</span> <span class="cm"> *</span>
+<span class="lineno"> 8</span> <span class="cm"> * Chief executive officer Rs. 35000/m</span>
+<span class="lineno"> 9</span> <span class="cm"> * Information officer Rs. 25000/m</span>
+<span class="lineno">10</span> <span class="cm"> * System analyst Rs. 24000/m</span>
+<span class="lineno">11</span> <span class="cm"> * Programmer Rs. 18000/m</span>
+<span class="lineno">12</span> <span class="cm"> * Make function that takes two arguments; one salary and other increment. Use proper default argument.</span>
+<span class="lineno">13</span> <span class="cm"> ********/</span>
+<span class="lineno">14</span> <span class="c1">// header file for input and output</span>
+<span class="lineno">15</span> <span class="cp">#include &lt;iostream&gt;</span>
+<span class="lineno">16</span> <span class="c1">// header file for input output manipulation</span>
+<span class="lineno">17</span> <span class="cp">#include &lt;iomanip&gt;</span>
+<span class="lineno">18</span> <span class="c1">// adding std namespace</span>
+<span class="lineno">19</span> <span class="n">using</span> <span class="n">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="lineno">20</span> <span class="cp">#define SUCESS 0</span>
+<span class="lineno">21</span> <span class="c1">// enum type for employee position</span>
+<span class="lineno">22</span> 
+<span class="lineno">23</span> <span class="k">struct</span> <span class="n">employee</span>
+<span class="lineno">24</span> <span class="p">{</span>
+<span class="lineno">25</span>   <span class="kt">char</span> <span class="n">position</span><span class="p">[</span><span class="mi">40</span><span class="p">];</span>
+<span class="lineno">26</span>   <span class="kt">int</span> <span class="n">salary</span><span class="p">;</span>
+<span class="lineno">27</span>   <span class="kt">int</span> <span class="n">rate</span><span class="p">;</span>
+<span class="lineno">28</span> <span class="p">};</span>
+<span class="lineno">29</span> <span class="kr">inline</span> <span class="kt">int</span> <span class="nf">newSalary</span> <span class="p">(</span><span class="kt">int</span> <span class="n">salary</span><span class="p">,</span> <span class="kt">int</span> <span class="n">percentage</span> <span class="o">=</span> <span class="mi">12</span><span class="p">)</span> <span class="p">{</span><span class="k">return</span> <span class="n">salary</span> <span class="o">*</span> <span class="p">(</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">percentage</span><span class="o">/</span><span class="mf">100.0</span><span class="p">);}</span>
+<span class="lineno">30</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="lineno">31</span> <span class="p">{</span>
+<span class="lineno">32</span>   <span class="c1">// data for year 2009</span>
+<span class="lineno">33</span>   <span class="k">struct</span> <span class="n">employee</span> <span class="n">employee</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+<span class="lineno">34</span>     <span class="p">{</span><span class="s">&quot;chief executive officer&quot;</span><span class="p">,</span><span class="mi">35000</span><span class="p">,</span><span class="mi">9</span><span class="p">},</span>
+<span class="lineno">35</span>     <span class="p">{</span><span class="s">&quot;information officer&quot;</span><span class="p">,</span><span class="mi">25000</span><span class="p">,</span><span class="mi">10</span><span class="p">},</span>
+<span class="lineno">36</span>     <span class="p">{</span><span class="s">&quot;system analyst&quot;</span><span class="p">,</span><span class="mi">24000</span><span class="p">,</span><span class="mi">12</span><span class="p">},</span>
+<span class="lineno">37</span>     <span class="p">{</span><span class="s">&quot;programmer&quot;</span><span class="p">,</span><span class="mi">18000</span><span class="p">,</span><span class="mi">12</span><span class="p">}</span>
+<span class="lineno">38</span>   <span class="p">};</span>
+<span class="lineno">39</span>   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;For year 2009&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="lineno">40</span>   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">employee</span><span class="p">)</span><span class="o">/</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">employee</span><span class="p">);</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="lineno">41</span>     <span class="p">{</span>
+<span class="lineno">42</span>       <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">employee</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">position</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; Rs. &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">employee</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">salary</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;/m&quot;</span> <span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+<span class="lineno">43</span>     <span class="p">}</span>
+<span class="lineno">44</span>   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;For year 2010&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="lineno">45</span>   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">employee</span><span class="p">)</span><span class="o">/</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">employee</span><span class="p">);</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="lineno">46</span>     <span class="p">{</span>
+<span class="lineno">47</span>       <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">employee</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">position</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; Rs. &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">newSalary</span><span class="p">(</span><span class="n">employee</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">salary</span><span class="p">,</span><span class="n">employee</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">rate</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;/m&quot;</span> <span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+<span class="lineno">48</span>     <span class="p">}</span>
+<span class="lineno">49</span>   <span class="k">return</span> <span class="n">SUCESS</span><span class="p">;</span>
+<span class="lineno">50</span> <span class="p">}</span></code></pre></div>
 
-
-<tr>
-	<th>
-		<a href="temp.cpp">
-		temp.cpp
-		</a>	
-	</th>
-</tr>
-<tr>
-	<th>
-
-<div class="highlight">
-<pre id="temp.cpp" ></pre>
-</div>
-	</th>
-	</tr>
-
-
-<tr>
-	<th>
-		<a href="namespace.cpp">
-		namespace.cpp
-		</a>	
-	</th>
-</tr>
-<tr>
-	<th>
-
-<div class="highlight">
-<pre id="namespace.cpp" ></pre>
-</div>
-	</th>
-	</tr>
-
-
-<tr>
-	<th>
-		<a href="employee.cpp">
-		employee.cpp
-		</a>	
-	</th>
-</tr>
-<tr>
-	<th>
-
-<div class="highlight">
-<pre id="employee.cpp" ></pre>
-</div>
-	</th>
-	</tr>
-
-
-<tr>
-	<th>
-		<a href="staff.cpp">
-		staff.cpp
-		</a>	
-	</th>
-</tr>
-<tr>
-	<th>
-
-<div class="highlight">
-<pre id="staff.cpp" ></pre>
-</div>
-	</th>
-	</tr>
-
-
+      
+    </th>
 </table>
-<script type="text/javascript">
 
-function ajax(url, box) {
-var request =  new XMLHttpRequest();
-request.open("GET", url, true);
-request.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-
-request.onreadystatechange = function() {
-var done = 4, ok = 200;
-if (request.readyState == done && request.status == ok) {
-  if (request.responseText) {
-	box.innerHTML = request.responseText;
-        }
-      }
-    };
-    request.send();
-}
-
-function getfiles() 
-{
-	
-        var box =  document.getElementById("date.cpp");	
-	if (box !== null)
-	ajax("date.cpp", box);
-	else
-	alert("box found empty");
-	
-        var box =  document.getElementById("convert.cpp");	
-	if (box !== null)
-	ajax("convert.cpp", box);
-	else
-	alert("box found empty");
-	
-        var box =  document.getElementById("temp.cpp");	
-	if (box !== null)
-	ajax("temp.cpp", box);
-	else
-	alert("box found empty");
-	
-        var box =  document.getElementById("namespace.cpp");	
-	if (box !== null)
-	ajax("namespace.cpp", box);
-	else
-	alert("box found empty");
-	
-        var box =  document.getElementById("employee.cpp");	
-	if (box !== null)
-	ajax("employee.cpp", box);
-	else
-	alert("box found empty");
-	
-        var box =  document.getElementById("staff.cpp");	
-	if (box !== null)
-	ajax("staff.cpp", box);
-	else
-	alert("box found empty");
-	
-(function() {
-    var pre = document.getElementsByTagName('pre'),
-        pl = pre.length;
-    for (var i = 0; i < pl; i++) {
-        pre[i].innerHTML = '<span class="line-number"></span>' + pre[i].innerHTML + '<span class="cl"></span>';
-        var num = pre[i].innerHTML.split(/\n/).length;
-        for (var j = 0; j < num; j++) {
-            var line_num = pre[i].getElementsByTagName('span')[0];
-            line_num.innerHTML += '<span>' + (j + 1) + '</span>';
-        }
-    }
-})();
-}
-
-document.addEventListener('DOMContentLoaded', getfiles, false);
-</script>
 
   </article>
   
