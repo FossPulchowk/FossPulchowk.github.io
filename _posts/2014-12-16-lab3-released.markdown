@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "lab3 code released"
+date: 2014-12-16 5:24 
+categories: site notification
+---
+The lab3 of C++ lab has been released to this site. If your are intrested to looking into my implementation or else are stuck and need some hint Please feel free to take a look at it.
+
+**Warning :** 
+	  1. *Copying whole source code is not recommended*
+	  2. *The code may be faulty and you may have to correct it*

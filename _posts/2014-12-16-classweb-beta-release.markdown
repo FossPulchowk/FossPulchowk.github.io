@@ -1,0 +1,9 @@
+---
+layout: post
+title: "Beta release of classweb"
+date: 2014-12-16 5:24 
+categories: project classweb
+---
+I would like to annouce the beta release of the [Classweb](https://class.maharjansujit.com.np). *Please get your hands dirty on testing the site.*
+
+The major purpose of this website is to act as the ultimate place for getting class notification via CR or teacher or other friends directly. So students dont have to miss out on any class notices.
