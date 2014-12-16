@@ -6,9 +6,45 @@
 </description>
     <link>maharjansujit.com.np/</link>
     <atom:link href="maharjansujit.com.np/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 11 Dec 2014 04:33:56 +0545</pubDate>
-    <lastBuildDate>Thu, 11 Dec 2014 04:33:56 +0545</lastBuildDate>
+    <pubDate>Tue, 16 Dec 2014 06:04:55 +0545</pubDate>
+    <lastBuildDate>Tue, 16 Dec 2014 06:04:55 +0545</lastBuildDate>
     <generator>Jekyll v2.5.2</generator>
+    
+      <item>
+        <title>lab3 code released</title>
+        <description>&lt;p&gt;The lab3 of C++ lab has been released to this site. If your are intrested to looking into my implementation or else are stuck and need some hint Please feel free to take a look at it.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Warning :&lt;/strong&gt; 
+	  1. &lt;em&gt;Copying whole source code is not recommended&lt;/em&gt;
+	  2. &lt;em&gt;The code may be faulty and you may have to correct it&lt;/em&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 16 Dec 2014 05:24:00 +0545</pubDate>
+        <link>maharjansujit.com.np/site/notification/2014/12/16/lab3-released.html</link>
+        <guid isPermaLink="true">maharjansujit.com.np/site/notification/2014/12/16/lab3-released.html</guid>
+        
+        
+        <category>site</category>
+        
+        <category>notification</category>
+        
+      </item>
+    
+      <item>
+        <title>Beta release of classweb</title>
+        <description>&lt;p&gt;I would like to annouce the beta release of the &lt;a href=&quot;https://class.maharjansujit.com.np&quot;&gt;Classweb&lt;/a&gt;. &lt;em&gt;Please get your hands dirty on testing the site.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The major purpose of this website is to act as the ultimate place for getting class notification via CR or teacher or other friends directly. So students dont have to miss out on any class notices.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 16 Dec 2014 05:24:00 +0545</pubDate>
+        <link>maharjansujit.com.np/project/classweb/2014/12/16/classweb-beta-release.html</link>
+        <guid isPermaLink="true">maharjansujit.com.np/project/classweb/2014/12/16/classweb-beta-release.html</guid>
+        
+        
+        <category>project</category>
+        
+        <category>classweb</category>
+        
+      </item>
     
       <item>
         <title>Welcome to Personal site</title>

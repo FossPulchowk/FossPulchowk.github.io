@@ -1,43 +1,72 @@
 /********
  *
- * Sujit Maharjan
+ * lab3
+ * problem 1
  *
- * lab2
- * Write a function that passes two temperatures by reference and sets the larger of the two numbers to 100 by using return by reference.
- ********/
-// header file for input and output
+ * Write a simple program that convert the temperature in degree Celsius to degree Fahrenheit and vice versa using the basic concept of class and object. Make separate class for Centigrade and Fahrenheit which will have the private member to hold the temperature value and make conversion functions in each class for conversion from one to other. For example you will have function toFahrenheit() in class Celsius that converts to Fahrenheit scale and returns the value. 
+ *
+ */
+// header file for input and output operation
 #include <iostream>
-// header file for input output manipulation
-#include <iomanip>
-// adding std namespace
+// using standard namespace
 using namespace std;
 #define SUCESS 0
-
-/********
- * \brief weird function that set higher argument to 100
- *
- * \parmas temp1: temperature by reference
- * \parmas temp2: temperature by reference
- ********/
-int func (int &temp1,int &temp2)
+/**
+ * Centigrade class that store centigrade values and convert it into ferhenhiet
+ */
+class Centigrade
+{
+private:
+  float temperature;
+public:
+  Centigrade(float t){temperature = t;}
+  float toFerhenheit()
   {
-    if (temp1 > temp2)
-      {
-	temp1 = 100;
-      }
-    else
-      {
-	temp2 = 100;
-      }
+    return (temperature)/100*180+32;
   }
+};
+
+/**
+ * Centigrade class that store centigrade values and convert it into ferhenhiet
+ */
+class Ferhenheit
+{
+private:
+  float temperature;
+public:
+  Ferhenheit(float t){temperature = t;}
+  float toCelcius()
+  {
+    return (temperature-32)/180*100+0;
+  }
+};
 
 int main()
 {
-  int temp1, temp2;
-  cout << "Enter temp1 and temp2?";
-  cin >> temp1>> temp2;
-  func(temp1,temp2);
-  cout << "Value of temp1 and temp2 after calling the fucntion"<< endl;
-  cout << "temp1 " << temp1 << " temp2 " << temp2; 
-  return SUCESS;
+  float temp;
+  int choice;
+  cout << "Select temperature unit to change into another"<< endl;
+  cout << "1. Celcius" << endl;
+  cout << "2. Ferhenheit" << endl;
+  cin >> choice;
+  if (choice == 1)
+    {
+      cout << "Enter temperature in celcius" << endl;
+      cin >> temp;
+      Centigrade C(temp);
+      cout << "temperature in Ferhenheit " << C.toFerhenheit();
+      
+    }
+  else if (choice == 2) 
+    {
+      cout << "Enter temperature in ferhenheit " << endl;
+      cin >> temp;
+      Ferhenheit F(temp);
+      cout << "temperature in Celcius " << F.toCelcius();
+      
+    }
+      
+  
+   return SUCESS;
 }
+
