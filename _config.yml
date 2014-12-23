@@ -1,11 +1,11 @@
 # Site settings
-title: Sujit Maharjan
-name: Sujit Maharjan
+title: Foss Pulchowk
+name: Foss
 email: mail@maharjansujit.com.np
 description: > # this means to ignore newlines until baserurl:
-  A site for my projects and my views. Hope you find it useful.
+  A site of Foss Pulchowk Community. This community promotes Free and Open Source Software in Pulchowk
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "maharjansujit.com.np" # the base hostname & protocol for your site
+url: "" # the base hostname & protocol for your site
 twitter_username: FrensOfAll
 github_username:  shubhajeet
 linkedin_username: Sujit 
