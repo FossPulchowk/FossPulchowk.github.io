@@ -1,60 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Sujit Maharjan</title>
-    <description>A site for my projects and my views. Hope you find it useful.
+    <title>Foss Pulchowk</title>
+    <description>A site of Foss Pulchowk Community. This community promotes Free and Open Source Software in Pulchowk
 </description>
-    <link>maharjansujit.com.np/</link>
-    <atom:link href="maharjansujit.com.np/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 21 Dec 2014 09:01:50 +0545</pubDate>
-    <lastBuildDate>Sun, 21 Dec 2014 09:01:50 +0545</lastBuildDate>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 23 Dec 2014 21:42:36 +0545</pubDate>
+    <lastBuildDate>Tue, 23 Dec 2014 21:42:36 +0545</lastBuildDate>
     <generator>Jekyll v2.5.2</generator>
     
       <item>
-        <title>lab3 code released</title>
-        <description>&lt;p&gt;The lab3 of C++ lab has been released to this site. If your are intrested to looking into my implementation or else are stuck and need some hint Please feel free to take a look at it.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Warning :&lt;/strong&gt; 
-	  1. &lt;em&gt;Copying whole source code is not recommended&lt;/em&gt;
-	  2. &lt;em&gt;The code may be faulty and you may have to correct it&lt;/em&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 16 Dec 2014 05:24:00 +0545</pubDate>
-        <link>maharjansujit.com.np/site/notification/2014/12/16/lab3-released.html</link>
-        <guid isPermaLink="true">maharjansujit.com.np/site/notification/2014/12/16/lab3-released.html</guid>
-        
-        
-        <category>site</category>
-        
-        <category>notification</category>
-        
-      </item>
-    
-      <item>
-        <title>Beta release of classweb</title>
-        <description>&lt;p&gt;I would like to annouce the beta release of the &lt;a href=&quot;https://class.maharjansujit.com.np&quot;&gt;Classweb&lt;/a&gt;. &lt;em&gt;Please get your hands dirty on testing the site.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;The major purpose of this website is to act as the ultimate place for getting class notification via CR or teacher or other friends directly. So students dont have to miss out on any class notices.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 16 Dec 2014 05:24:00 +0545</pubDate>
-        <link>maharjansujit.com.np/project/classweb/2014/12/16/classweb-beta-release.html</link>
-        <guid isPermaLink="true">maharjansujit.com.np/project/classweb/2014/12/16/classweb-beta-release.html</guid>
-        
-        
-        <category>project</category>
-        
-        <category>classweb</category>
-        
-      </item>
-    
-      <item>
-        <title>Welcome to Personal site</title>
-        <description>&lt;p&gt;Welcome to my website. I am Sujit Maharjan, a student of Electronics Engineer and this site is dedicated to my projects. Basically I will put a link and explanation of things that I have created in my life. It may be a College Project orit may be a project that I am working on. Either way I hope you will find it useful.&lt;/p&gt;
+        <title>Welcome to Foss Pulchowk</title>
+        <description>&lt;p&gt;Welcome to Foss Pulchowk. I am Sujit Maharjan, a student of Electronics Engineer and this site is dedicated to Foss Pulchwok. This gives information about Foss Pulchowk and Agenda of FOSS Pulchowk.&lt;/p&gt;
 
 &lt;p&gt;If you want to follow me please do click on the twitter button on the sidebar. Please will free to look at my github account to see things I have created and even fork it.&lt;/p&gt;
 </description>
         <pubDate>Sun, 07 Dec 2014 23:17:27 +0545</pubDate>
-        <link>maharjansujit.com.np/about</link>
-        <guid isPermaLink="true">maharjansujit.com.np/about</guid>
+        <link>/site/about/2014/12/07/welcome-to-site.html</link>
+        <guid isPermaLink="true">/site/about/2014/12/07/welcome-to-site.html</guid>
         
         
         <category>site</category>
