@@ -108,7 +108,7 @@ img {
 header {
   width:270px;
   float:left;
-  position:fixed;
+  
 }
 
 .box ul{
@@ -226,11 +226,11 @@ hr {
   header, section {
     float:none;
     position:static;
-    width:auto;
-  }
+    align-content: center;
+   }
   
   header {
-    padding-right:320px;
+    padding-right:20px;
   }
   
   section {
@@ -244,11 +244,7 @@ hr {
     display:inline;
   }
   
-  header ul {
-    position:absolute;
-    right:50px;
-    top:52px;
-  }
+
 }
 
 @media print, screen and (max-width: 720px) {
@@ -274,9 +270,7 @@ hr {
     padding:15px;
   }
   
-  header ul {
-    display:none;
-  }
+
 }
 
 @media print {

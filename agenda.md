@@ -4,5 +4,8 @@ type: page
 title: Agenda/Programs
 permalink: /Agenda/
 ---
-TODO
+
+* TODO Foss Awareness 
+* TODO Linux Installfest
+
 
