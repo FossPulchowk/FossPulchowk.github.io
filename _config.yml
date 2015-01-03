@@ -1,9 +1,9 @@
 # Site settings
-title: Foss Pulchowk
+title: FOSS Pulchowk
 name: Sujit Maharjan
 email: mail@maharjansujit.com.np
 description: > # this means to ignore newlines until baserurl:
-  A site of Foss Pulchowk Community. This community promotes Free and Open Source Software in Pulchowk
+  A site of FOSS community of Pulchowk Campus. This community promotes Free and Open Source Software in Pulchowk Campus.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 icon: assets/fossnepal-logo.png
