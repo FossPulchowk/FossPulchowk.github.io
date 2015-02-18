@@ -1,0 +1,22 @@
+* Foss Pulchowk
+This is a Foss Pulchowk official website 
+
+** About this site
+This site has been created by using jekyll static page generator and will provide the officail information about foss pulchowk community.
+
+** Requirements
+1. Go ahead and install jekyll
+#+SRC_BASH
+sudo apt-get install jekyll
+#+ENDSRC
+
+** Creating a Post
+All posts are in _post directory. Change your dir to _post and look at the already made post to create a new post.
+#+SRC_BASH
+jekyll b
+jekyll s
+#+END_SRC
+
+** Push the changes to this site
+Please check that all the site is working before pushing your changes to this website.
+ 

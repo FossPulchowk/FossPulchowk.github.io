@@ -6,9 +6,28 @@
 </description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 05 Feb 2015 07:04:03 +0545</pubDate>
-    <lastBuildDate>Thu, 05 Feb 2015 07:04:03 +0545</lastBuildDate>
+    <pubDate>Wed, 18 Feb 2015 17:45:53 +0545</pubDate>
+    <lastBuildDate>Wed, 18 Feb 2015 17:45:53 +0545</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Foss Stall in Locus 2015</title>
+        <description>&lt;p&gt;FOSS Pulchowk is setting up a stall at the Locus 2015. This event is going to be held on Falgun 8, 9, 10 on Institue of Engineering Central Campus, Pulchowk, Lalipur. Please visit the stall and make this Program Sucessful.&lt;/p&gt;
+
+&lt;p&gt;We will be:
+1. Distributing Linux iso file
+2. Answering queries about open source software and rasising awareness about it
+3. Installing Linux for those who needs assistants.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 18 Feb 2015 23:26:00 +0545</pubDate>
+        <link>/event/2015/02/18/FossStallLocus2015.html</link>
+        <guid isPermaLink="true">/event/2015/02/18/FossStallLocus2015.html</guid>
+        
+        
+        <category>event</category>
+        
+      </item>
     
       <item>
         <title>Welcome to FOSS Pulchowk</title>
