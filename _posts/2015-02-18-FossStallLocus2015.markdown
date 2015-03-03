@@ -5,7 +5,7 @@ date:   2015-02-18 17:41:00
 categories: event
 ---
 
-![Infographics](/img/fossPulchowk.jpg)
+![Infographics](/img/fossPulchowk.jpg 100*75)
 FOSS Pulchowk is setting up a stall at the Locus 2015. This event is going to be held on **Falgun 8, 9, 10** on **Institue of Engineering Central Campus, Pulchowk, Lalipur**. Please visit the stall and make this Program Sucessful.
 
 We will be:
