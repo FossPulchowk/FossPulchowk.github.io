@@ -15,14 +15,14 @@ Topics of Discussion/Topics Raised
 4. Representation of FOSS PULCHOWK Community in FOSS NEPAL
 5. Need to organize programs and create open source projects on the name of FOSS PULCHOWK
 
-Decision
+Decision \ Conclusion Drawn
 
 1. Gather more FOSS enthusiastic from all of PULCHOWK campus and from a committee to facilitate the interaction with other organizations and grab opportunities for the PULCHOWK students.
 2. Try and explore different virtual medium to organize the FOSS PULCHOWK meetings.
 3. Try to get foss.ioe.edu.np domain withing a week.
 4. Requesting all the FOSS enthusiastic to attend FOSS NEPAL meeting representing FOSS PULCHOWK if they are free.
 5. Creating a system in which anybody(students from pulchowk campus) can freely organize program in the name of FOSS PULCHOWK (Trail :: Online form for anybody who wants to organize any foss events).
-6. Reactivating FossPulchowk github organization and FossPulchowk.github.io webiste.
+6. Reactivating [FossPulchowk](github.com/fosspulchowk) github organization and [FossPulchowk.github.io](FossPulchowk.github.io) website.
 
 Attendees
 
