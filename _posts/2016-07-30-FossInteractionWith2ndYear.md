@@ -22,7 +22,7 @@ Decision \ Conclusion Drawn
 3. Try to get foss.ioe.edu.np domain withing a week.
 4. Requesting all the FOSS enthusiastic to attend FOSS NEPAL meeting representing FOSS PULCHOWK if they are free.
 5. Creating a system in which anybody(students from pulchowk campus) can freely organize program in the name of FOSS PULCHOWK (Trail :: Online form for anybody who wants to organize any foss events).
-6. Reactivating [FossPulchowk](github.com/fosspulchowk) github organization and [FossPulchowk.github.io](FossPulchowk.github.io) website.
+6. Reactivating [FossPulchowk](http://github.com/fosspulchowk) github organization and [FossPulchowk.github.io](http://FossPulchowk.github.io) website.
 
 Attendees
 
